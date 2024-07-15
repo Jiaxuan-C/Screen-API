@@ -1,0 +1,18 @@
+spring:
+  kafka:
+    bootstrap-servers: 10.253.26.227:9092
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: ru.yandex.clickhouse.ClickHouseDriver
+    username:
+    password:
+    url: jdbc:clickhouse://10.112.196.200:8123/default
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.bupt.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+server:
+  port: 30110
